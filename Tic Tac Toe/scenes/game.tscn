@@ -1,0 +1,298 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnrf1f1nunlul"]
+
+[ext_resource type="PackedScene" uid="uid://cpmxpo4376cp7" path="res://scenes/grid.tscn" id="1_86xct"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_kvdug"]
+[ext_resource type="Script" path="res://scenes/hbox.gd" id="2_hc5pm"]
+[ext_resource type="Texture2D" uid="uid://c4ibhluqxoidb" path="res://assets/images/cross.png" id="2_st5t0"]
+[ext_resource type="Texture2D" uid="uid://b5y25qkyu2ew1" path="res://assets/images/circle.png" id="3_htkyk"]
+[ext_resource type="Texture2D" uid="uid://cpe4ar2kl0muc" path="res://assets/images/background.png" id="4_xt0nv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8r7c"]
+bg_color = Color(0.164706, 0.133333, 0.207843, 1)
+
+[sub_resource type="Animation" id="Animation_q0mvy"]
+resource_name = "question"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 124), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 400), Vector2(1152, 104)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("vbox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(476, 135.5), Vector2(474, 40)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("vbox:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 69)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("vbox/hbox:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(200, 100), Vector2(200, 40)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("vbox/hbox/cross/cross_icon:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 40), Vector2(24, 24)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("vbox/hbox/cross/cross_icon:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(30, 30), Vector2(38, 8)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("vbox/hbox/circle/circle_icon:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(44, 44), Vector2(26, 26)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("vbox/hbox/circle/circle_icon:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(29, 29), Vector2(37, 7)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("vbox/hbox/cross:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("vbox/hbox/circle:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("vbox/hbox/cross:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("vbox/hbox/circle:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_slg7s"]
+_data = {
+"question": SubResource("Animation_q0mvy")
+}
+
+[node name="game" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.309804, 0.372549, 0.815686, 1)
+script = ExtResource("1_kvdug")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="grid" parent="." instance=ExtResource("1_86xct")]
+custom_minimum_size = Vector2(384, 384)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -196.0
+offset_right = 192.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="alert" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 124.0
+offset_bottom = 524.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l8r7c")
+
+[node name="vbox" type="VBoxContainer" parent="alert"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -64.5
+offset_right = 104.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="alert/vbox"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][rainbow freq=0.5 sat=0.6 val=0.9]Escolha sua peça "
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="hbox" type="HBoxContainer" parent="alert/vbox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_hc5pm")
+
+[node name="cross" type="TextureButton" parent="alert/vbox/hbox"]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("4_xt0nv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="cross_icon" type="TextureRect" parent="alert/vbox/hbox/cross"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_st5t0")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="circle" type="TextureButton" parent="alert/vbox/hbox"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("4_xt0nv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="circle_icon" type="TextureRect" parent="alert/vbox/hbox/circle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_htkyk")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Animator" type="AnimationPlayer" parent="alert"]
+libraries = {
+"": SubResource("AnimationLibrary_slg7s")
+}
