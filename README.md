@@ -2,4 +2,4 @@
 
 Jogo da velha feito para fins didáticos em dois dias utilizando a Godot Engine.
 
-É possível jogar a primeira versão desse jogo [aqui]()!
+É possível jogar a primeira versão desse jogo [aqui](https://srtazuzza.github.io/tic_tac_toe/)!
